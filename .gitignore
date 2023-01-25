@@ -28,4 +28,7 @@ e2e/*.map
 # System Files
 .DS_Store/
 
+# Cache
+.angular/cache/
+
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Angular
