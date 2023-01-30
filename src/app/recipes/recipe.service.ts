@@ -22,6 +22,10 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+  getRecipe(id: number): Recipe{
+    return this.recipes[id];
+  }
+
   addRecipe(newRecipe: Recipe) {
     this.recipes.push(newRecipe)
   }
