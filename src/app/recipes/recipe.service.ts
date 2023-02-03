@@ -1,6 +1,7 @@
-import {EventEmitter, Injectable} from "@angular/core";
+import {Injectable} from "@angular/core";
 import {Recipe} from "./recipe.model";
 import {Ingredient} from "../shared/ingredient.model";
+import {Subject} from "rxjs";
 
 @Injectable()
 export class RecipeService {
@@ -16,7 +17,7 @@ export class RecipeService {
       'https://www.gourmet-magazin.de/fileadmin/_processed_/7/6/csm_cheeseburger-1_2f797a6fd4.jpg',
       [new Ingredient('Bun', 1), new Ingredient('Beef', 250)])
   ];
-  recipeSelected = new EventEmitter<Recipe>();
+  recipeSelected = new Subject<Recipe>();
 
   getRecipes() {
     return this.recipes.slice();

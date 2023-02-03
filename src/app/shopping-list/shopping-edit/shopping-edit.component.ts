@@ -1,7 +1,7 @@
 import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
-import {RouterOutlet} from "@angular/router";
 import {Ingredient} from "../../shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list.service";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-shopping-edit',
